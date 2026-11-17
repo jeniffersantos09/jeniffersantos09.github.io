@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jeniffer Santos | Dados, BI e Engenharia de Dados</title>
+  <meta name="description" content="Portfólio de Jeniffer Santos: projetos de BI, pipelines de dados e agentes de IA.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <nav class="menu" aria-label="Seções do site">
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#formacao">Formação</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <h1 class="nome">Jeniffer Santos</h1>
+    <p class="apresentacao">Analista de dados com foco em engenharia de dados e BI. Eu levo o dado do banco até a decisão: modelagem, pipelines, dashboards e automação com IA.</p>
+
+    <p class="links-topo">
+      <a href="https://github.com/SEU-USUARIO">GitHub</a>
+      <a href="https://www.linkedin.com/in/SEU-LINKEDIN">LinkedIn</a>
+      <a href="mailto:seu-email@exemplo.com">E-mail</a>
+    </p>
+  </header>
+
+  <main>
+
+    <section id="sobre" class="secao">
+      <h2>Sobre</h2>
+      <div class="conteudo">
+        <p>Sou estudante de Sistemas de Informação na Unifacisa, com formatura prevista para 2027, e já trabalho com dados no dia a dia: consultas em SQL, modelagem, rotinas em Python e dashboards em Power BI.</p>
+        <p>Também avalio e treino modelos de IA generativa e construo agentes que se conectam a bancos de dados e APIs. Os projetos abaixo mostram como eu pensei e montei cada solução, da arquitetura ao resultado.</p>
+      </div>
+    </section>
+
+    <section id="projetos" class="secao">
+      <h2>Projetos</h2>
+      <div class="conteudo">
+        <p class="dica">Clique em um projeto para ver como ele funciona.</p>
+
+        <details class="projeto">
+          <summary>
+            <h3>BI para e-commerce</h3>
+            <p class="resumo">Pipeline completo, do banco transacional ao dashboard no Power BI.</p>
+            <p class="stack">SSIS, SQL Server, Power BI, DAX</p>
+          </summary>
+          <div class="detalhes">
+            <ul>
+              <li>ETL em SSIS com camada Stage e área de auditoria para registros com erro (BI_ERROR).</li>
+              <li>Data Warehouse em Star Schema, com SCD Tipo 2 para guardar o histórico das dimensões.</li>
+              <li>Carga incremental com controle por watermark, evitando reprocessar todo o histórico.</li>
+              <li>Dimensão Tempo personalizada e dashboards com medidas em DAX.</li>
+            </ul>
+            <p><a href="https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO-BI">Ver repositório no GitHub</a></p>
+          </div>
+        </details>
+
+        <details class="projeto">
+          <summary>
+            <h3>Automação de dados para gestão de resíduos</h3>
+            <p class="resumo">Pipeline ETL orquestrado que processa os arquivos de um sistema de gestão de resíduos.</p>
+            <p class="stack">Python, MySQL, Apache Airflow, Docker, AWS S3</p>
+          </summary>
+          <div class="detalhes">
+            <ul>
+              <li>Pipeline ETL em Python, com carga no MySQL.</li>
+              <li>Orquestração com Apache Airflow rodando em Docker.</li>
+              <li>Arquivos de entrada armazenados no Amazon S3.</li>
+              <li>Regras de negócio e arquitetura de dados definidas a partir do protótipo do sistema.</li>
+            </ul>
+            <p><a href="https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO-RESIDUOS">Ver repositório no GitHub</a></p>
+          </div>
+        </details>
+
+        <details class="projeto">
+          <summary>
+            <h3>Agente de IA para automação de cobranças</h3>
+            <p class="resumo">Agente que entende pedidos em linguagem natural e consulta inadimplências e pagamentos.</p>
+            <p class="stack">Python, FastAPI, MySQL, tool calling</p>
+          </summary>
+          <div class="detalhes">
+            <ul>
+              <li>Interpreta solicitações em linguagem natural e escolhe a ferramenta certa para cada pedido (tool calling).</li>
+              <li>Integração com MySQL para consultar inadimplências e dados de pagamento e executar ações de cobrança.</li>
+              <li>Fluxo human-in-the-loop: pede confirmação do usuário antes de qualquer ação sensível.</li>
+              <li>Disponibilizado como API REST com FastAPI.</li>
+            </ul>
+            <p><a href="https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO-AGENTE">Ver repositório no GitHub</a></p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="habilidades" class="secao">
+      <h2>Habilidades</h2>
+      <div class="conteudo">
+        <dl class="habilidades">
+          <dt>Bancos de dados</dt>
+          <dd>SQL, SQL Server, MySQL, PostgreSQL, Databricks</dd>
+
+          <dt>Engenharia de dados</dt>
+          <dd>Python, SSIS, Apache Airflow, Docker, Git, Linux</dd>
+
+          <dt>Nuvem</dt>
+          <dd>AWS (Amazon S3)</dd>
+
+          <dt>BI e análise</dt>
+          <dd>Power BI, DAX, Excel, protótipos de dashboards no Figma</dd>
+
+          <dt>Inteligência artificial</dt>
+          <dd>Engenharia de prompts, APIs de modelos de IA, tool calling, FastAPI, avaliação da qualidade de respostas de LLMs</dd>
+
+          <dt>Método de trabalho</dt>
+          <dd>Scrum, Lean Six Sigma (Yellow Belt)</dd>
+
+          <dt>Idiomas</dt>
+          <dd>Português nativo, inglês intermediário</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="formacao" class="secao">
+      <h2>Formação</h2>
+      <div class="conteudo">
+        <ul class="formacao">
+          <li>
+            <strong>Bacharelado em Sistemas de Informação</strong>
+            <span>Centro Universitário Unifacisa, 2023 a 2027</span>
+          </li>
+          <li>
+            <strong>Certificação Yellow Belt em Lean Six Sigma</strong>
+            <span>Melhoria de processos</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contato" class="secao">
+      <h2>Contato</h2>
+      <div class="conteudo">
+        <p>Quer conversar sobre dados, BI ou automação com IA? Me escreva.</p>
+        <p class="links-contato">
+          <a href="mailto:seu-email@exemplo.com">seu-email@exemplo.com</a>
+          <a href="https://www.linkedin.com/in/SEU-LINKEDIN">LinkedIn</a>
+          <a href="https://github.com/SEU-USUARIO">GitHub</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>Jeniffer da Silva Santos, 2026.</p>
+  </footer>
+
+</body>
+</html>
