@@ -306,3 +306,87 @@ summary:focus-visible {
     margin-bottom: 0.9rem;
   }
 }
+
+/* ---------- Ajustes: problema / o que fiz, status, experiência ---------- */
+.detalhes h4 {
+  margin: 1rem 0 0.35rem;
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.detalhes h4:first-child {
+  margin-top: 0;
+}
+
+.detalhes p a + a {
+  margin-left: 1.25rem;
+}
+
+.status {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.05rem 0.55rem;
+  border-radius: 999px;
+  background: var(--realce);
+  color: var(--destaque);
+  font-family: var(--fonte-texto);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.experiencia {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experiencia li {
+  margin-bottom: 1.5rem;
+}
+
+.experiencia strong {
+  display: block;
+}
+
+.experiencia span {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--grafite);
+  font-size: 0.95rem;
+}
+
+.experiencia p {
+  margin: 0;
+}
+
+.subtitulo {
+  margin: 2.5rem 0 1rem;
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+/* ---------- Ajustes: resultado e listas dentro da experiência ---------- */
+.resultado {
+  padding-left: 0.9rem;
+  border-left: 3px solid var(--destaque);
+  font-weight: 500;
+}
+
+.experiencia li ul {
+  margin: 0.35rem 0 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+  max-width: 62ch;
+}
+
+.experiencia li li {
+  margin-bottom: 0.3rem;
+}
+
+.experiencia li li::marker {
+  color: var(--destaque);
+}
