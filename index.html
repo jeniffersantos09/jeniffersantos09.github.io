@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jeniffer Santos | Dados, BI e Engenharia de Dados</title>
-  <meta name="description" content="Portfólio de Jeniffer Santos: projetos de BI, pipelines de dados e agentes de IA.">
+  <title>Jeniffer Santos | Engenharia de IA e Dados</title>
+  <meta name="description" content="Portfólio de Jeniffer Santos: soluções em produção, LLMs, agentes de IA, pipelines e BI.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,19 +16,21 @@
   <header class="topo">
     <nav class="menu" aria-label="Seções do site">
       <a href="#sobre">Sobre</a>
+      <a href="#producao">Em produção</a>
       <a href="#projetos">Projetos</a>
+      <a href="#experiencia">Experiência e formação</a>
       <a href="#habilidades">Habilidades</a>
-      <a href="#formacao">Formação</a>
       <a href="#contato">Contato</a>
     </nav>
 
     <h1 class="nome">Jeniffer Santos</h1>
-    <p class="apresentacao">Analista de dados com foco em engenharia de dados e BI. Eu levo o dado do banco até a decisão: modelagem, pipelines, dashboards e automação com IA.</p>
+    <p class="apresentacao">Construo soluções de software com IA, de agentes com tool calling a modelos de linguagem ajustados com QLoRA, apoiada em uma base sólida de dados.</p>
 
     <p class="links-topo">
-      <a href="https://github.com/jeniffersantos09">GitHub</a>
-      <a href="https://www.linkedin.com/in/https://meu linkedin>LinkedIn</a>
-      <a href="mailto:seu-email@exemplo.com">jeniffersantossilva10@gmail.com</a>
+      <a href="https://github.com/SEU-USUARIO">GitHub</a>
+      <a href="https://huggingface.co/SEU-USUARIO-HF">Hugging Face</a>
+      <a href="https://www.linkedin.com/in/jeniffer-santos-/">LinkedIn</a>
+      <a href="mailto:seu-email@exemplo.com">E-mail</a>
     </p>
   </header>
 
@@ -37,30 +39,107 @@
     <section id="sobre" class="secao">
       <h2>Sobre</h2>
       <div class="conteudo">
-        <p>Sou estudante de Sistemas de Informação na Unifacisa, com formatura prevista para Setembro de 2027, e já trabalho com dados no dia a dia: consultas em SQL, modelagem, rotinas em Python e dashboards em Power BI.</p>
-        <p>Também avalio e treino modelos de IA generativa e construo agentes que se conectam a bancos de dados e APIs. Os projetos abaixo mostram como eu pensei e montei cada solução, da arquitetura ao resultado.</p>
+        <p>Estudo Sistemas de Informação na Unifacisa (formatura em 2027) e trabalho com IA e dados no dia a dia. Hoje avalio e treino modelos de IA generativa, analiso a qualidade das respostas de LLMs e atuo como analista de dados, direto no banco de dados.</p>
+        <p>Nos meus projetos, uso Python, FastAPI, PyTorch e Hugging Face para integrar IA a sistemas reais: agentes que consultam bancos de dados, modelos ajustados com QLoRA e pipelines que sustentam tudo isso.</p>
+      </div>
+    </section>
+
+    <section id="producao" class="secao">
+      <h2>Soluções em produção</h2>
+      <div class="conteudo">
+        <p class="dica">Usadas por outras pessoas, com resultados mensuráveis. Clique para ver o problema e o que eu fiz.</p>
+
+        <details class="projeto">
+          <summary>
+            <h3>Previsão de inadimplência no cartão</h3>
+            <p class="resumo">Modelo que estima o risco de cada cliente e explica os fatores por trás da inadimplência.</p>
+            <p class="stack">Python, SQL, modelo de classificação, SHAP, Power BI</p>
+          </summary>
+          <div class="detalhes">
+            <h4>Problema</h4>
+            <p>A empresa sabia que a inadimplência no modelo cartão era alta, mas não sabia o motivo nem quais perfis de cliente concentravam o risco.</p>
+            <h4>O que fiz</h4>
+            <p>Extraí os dados direto do banco e cruzei os clientes inadimplentes com os planos contratados e as características de cada contrato. Tratei tudo em Python e SQL, treinei um modelo de classificação para estimar o risco por cliente e usei SHAP para explicar os fatores que mais pesam. Entreguei ao gestor as causas encontradas e recomendações.</p>
+            <h4>Resultado</h4>
+            <p class="resultado">Causas da inadimplência e perfis de maior risco identificados, com recomendações entregues ao gestor.</p>
+          </div>
+        </details>
+
+        <details class="projeto">
+          <summary>
+            <h3>Conciliação de notas fiscais</h3>
+            <p class="resumo">Automação mensal que compara o portal governamental com a base interna e aponta as notas faltantes.</p>
+            <p class="stack">Python, SQL Server, Power BI, Figma</p>
+          </summary>
+          <div class="detalhes">
+            <h4>Problema</h4>
+            <p>A contabilidade conferia cerca de 500 notas por ciclo, uma a uma, entre o portal governamental e a base interna, porque alguns documentos não chegavam até ela. O processo levava semanas.</p>
+            <h4>O que fiz</h4>
+            <p>Desenvolvi uma automação em Python que integra o portal e a base interna, trata os dados e identifica as notas presentes no portal e ausentes na base. Validei a consistência com consultas no SQL Server e criei um dashboard no Power BI, com interface planejada no Figma. O processo roda sozinho todo mês.</p>
+            <h4>Resultado</h4>
+            <p class="resultado">Pendências identificadas no mesmo dia, em vez de semanas.</p>
+          </div>
+        </details>
+
+        <details class="projeto">
+          <summary>
+            <h3>Integração de dados entre sistemas</h3>
+            <p class="resumo">Fluxo automático que leva os dados do ERP para outro sistema, sem trabalho manual.</p>
+            <p class="stack">SQL, integração por arquivo e por banco, agendamento com log e alerta</p>
+          </summary>
+          <div class="detalhes">
+            <h4>Problema</h4>
+            <p>Os dados do ERP precisavam ser levados manualmente para outro sistema, um processo repetitivo, sujeito a erro e que atrasava a visualização das informações.</p>
+            <h4>O que fiz</h4>
+            <p>Estruturei views em SQL com regras e campos padronizados e configurei a integração por arquivo e por banco. Agendei a execução automática com log e alerta de falha, e documentei o processo de ponta a ponta.</p>
+            <h4>Resultado</h4>
+            <p class="resultado">O processo manual virou um fluxo automatizado, com dados disponíveis para visualização sem intervenção.</p>
+          </div>
+        </details>
       </div>
     </section>
 
     <section id="projetos" class="secao">
-      <h2>Projetos</h2>
+      <h2>Projetos de IA e dados</h2>
       <div class="conteudo">
-        <p class="dica">Clique em um projeto para ver como ele funciona.</p>
+        <p class="dica">Clique em um projeto para ver o problema e o que eu fiz.</p>
 
         <details class="projeto">
           <summary>
-            <h3>BI para e-commerce</h3>
-            <p class="resumo">Pipeline completo, do banco transacional ao dashboard no Power BI.</p>
-            <p class="stack">SSIS, SQL Server, Power BI, DAX</p>
+            <h3>juiz-ptbr</h3>
+            <p class="resumo">Modelo que avalia respostas de IA em português e devolve nota, categoria e justificativa.</p>
+            <p class="stack">Python, PyTorch, QLoRA, Transformers, Hugging Face</p>
           </summary>
           <div class="detalhes">
+            <h4>Problema</h4>
+            <p>Avaliar a qualidade das respostas de um LLM em português costuma ser um trabalho manual, lento e difícil de padronizar.</p>
+            <h4>O que fiz</h4>
             <ul>
-              <li>ETL em SSIS com camada Stage e área de auditoria para registros com erro (BI_ERROR).</li>
-              <li>Data Warehouse em Star Schema, com SCD Tipo 2 para guardar o histórico das dimensões.</li>
-              <li>Carga incremental com controle por watermark, evitando reprocessar todo o histórico.</li>
-              <li>Dimensão Tempo personalizada e dashboards com medidas em DAX.</li>
+              <li>Ajustei um modelo Qwen com QLoRA para atuar como juiz: ele recebe a pergunta e a resposta de uma IA.</li>
+              <li>Montei o fluxo de fine-tuning e de inferência.</li>
+              <li>A avaliação sai em JSON, com nota, categoria e justificativa.</li>
             </ul>
-            <p><a href="https://github.com/jeniffersantos09/NOME-DO-REPOSITORIO-BI">Ver repositório no GitHub</a></p>
+            <p><a href="https://github.com/SEU-USUARIO/juiz-ptbr">Código no GitHub</a> <a href="https://huggingface.co/SEU-USUARIO-HF/juiz-ptbr">Modelo no Hugging Face</a></p>
+          </div>
+        </details>
+
+        <details class="projeto">
+          <summary>
+            <h3>Agente de IA para automação de cobranças <span class="status">em andamento</span></h3>
+            <p class="resumo">Agente que entende pedidos em linguagem natural e consulta inadimplências e pagamentos.</p>
+            <p class="stack">Python, FastAPI, MySQL, tool calling</p>
+          </summary>
+          <div class="detalhes">
+            <h4>Problema</h4>
+            <p>Consultar inadimplências e executar ações de cobrança exigia buscar os dados manualmente em vários lugares.</p>
+            <h4>O que fiz</h4>
+            <ul>
+              <li>Construí um agente que interpreta pedidos em linguagem natural e escolhe a ferramenta certa (tool calling).</li>
+              <li>Integrei o agente ao MySQL para consultar inadimplências e pagamentos e executar ações de cobrança.</li>
+              <li>Criei um fluxo human-in-the-loop: o agente pede confirmação antes de qualquer ação sensível.</li>
+              <li>Disponibilizei tudo como API REST com FastAPI.</li>
+            </ul>
+            <p><a href="https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO-AGENTE">Código no GitHub</a></p>
           </div>
         </details>
 
@@ -71,66 +150,78 @@
             <p class="stack">Python, MySQL, Apache Airflow, Docker, AWS S3</p>
           </summary>
           <div class="detalhes">
+            <h4>Problema</h4>
+            <p>Os dados do sistema chegavam em arquivos e precisavam virar informação confiável no banco, sem processamento manual.</p>
+            <h4>O que fiz</h4>
             <ul>
-              <li>Pipeline ETL em Python, com carga no MySQL.</li>
-              <li>Orquestração com Apache Airflow rodando em Docker.</li>
-              <li>Arquivos de entrada armazenados no Amazon S3.</li>
-              <li>Regras de negócio e arquitetura de dados definidas a partir do protótipo do sistema.</li>
+              <li>Criei um pipeline ETL em Python com carga no MySQL.</li>
+              <li>Orquestrei as execuções com Apache Airflow em Docker.</li>
+              <li>Armazenei os arquivos de entrada no Amazon S3.</li>
+              <li>Defini as regras de negócio e a arquitetura de dados a partir do protótipo do sistema.</li>
             </ul>
-            <p><a href="https://github.com/jeniffersantos09/NOME-DO-REPOSITORIO-RESIDUOS">Ver repositório no GitHub</a></p>
+            <p><a href="https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO-RESIDUOS">Código no GitHub</a></p>
           </div>
         </details>
 
         <details class="projeto">
           <summary>
-            <h3>Agente de IA para automação de cobranças</h3>
-            <p class="resumo">Agente que entende pedidos em linguagem natural e consulta inadimplências e pagamentos.</p>
-            <p class="stack">Python, FastAPI, MySQL, tool calling</p>
+            <h3>BI para e-commerce</h3>
+            <p class="resumo">Pipeline completo, do banco transacional ao dashboard no Power BI.</p>
+            <p class="stack">SSIS, SQL Server, Power BI, DAX</p>
           </summary>
           <div class="detalhes">
+            <h4>Problema</h4>
+            <p>Os dados de vendas ficavam no banco transacional, que não é feito para análise nem guarda o histórico das mudanças.</p>
+            <h4>O que fiz</h4>
             <ul>
-              <li>Interpreta solicitações em linguagem natural e escolhe a ferramenta certa para cada pedido (tool calling).</li>
-              <li>Integração com MySQL para consultar inadimplências e dados de pagamento e executar ações de cobrança.</li>
-              <li>Fluxo human-in-the-loop: pede confirmação do usuário antes de qualquer ação sensível.</li>
-              <li>Disponibilizado como API REST com FastAPI.</li>
+              <li>Montei o ETL em SSIS com camada Stage e área de auditoria para registros com erro (BI_ERROR).</li>
+              <li>Modelei um Data Warehouse em Star Schema, com SCD Tipo 2 para guardar o histórico das dimensões.</li>
+              <li>Implementei carga incremental com watermark, sem reprocessar todo o histórico.</li>
+              <li>Criei uma Dimensão Tempo personalizada e dashboards com medidas em DAX.</li>
             </ul>
-            <p><a href="https://github.com/jeniffersantos09/NOME-DO-REPOSITORIO-AGENTE">Ver repositório no GitHub</a></p>
+            <p><a href="https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO-BI">Código no GitHub</a></p>
           </div>
         </details>
       </div>
     </section>
 
-    <section id="habilidades" class="secao">
-      <h2>Habilidades</h2>
+    <section id="experiencia" class="secao">
+      <h2>Experiência e formação</h2>
       <div class="conteudo">
-        <dl class="habilidades">
-          <dt>Bancos de dados</dt>
-          <dd>SQL, SQL Server, MySQL, PostgreSQL, Databricks</dd>
+        <ul class="experiencia">
+          <li>
+            <strong>Analista de Dados, Grupo Digna</strong>
+            <span>Jul. 2026 a atual · Campina Grande, Paraíba</span>
+            <ul>
+              <li>Desenvolvimento, manutenção e atualização de dashboards e relatórios gerenciais em Power BI, com foco no acompanhamento de indicadores.</li>
+              <li>Consultas SQL no SQL Server para extração, análise, validação e manipulação de dados diretamente no banco.</li>
+              <li>Tratamento, organização e conciliação de dados, identificando inconsistências, divergências e oportunidades de melhoria na qualidade das informações.</li>
+              <li>Scripts em Python para automatizar tarefas operacionais e rotinas de análise, reduzindo atividades manuais.</li>
+              <li>Excel para análise, consolidação, validação e conferência de dados.</li>
+              <li>Reuniões de alinhamento com as áreas envolvidas para levantar necessidades, validar informações e definir melhorias nos processos.</li>
+              <li>Apoio à otimização dos processos de coleta, transformação, validação e disponibilização de dados para análise e relatórios.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>AI Data Trainer, Outlier</strong>
+            <span>Jan. 2025 a atual · Freelance</span>
+            <ul>
+              <li>Treinamento e avaliação de modelos de Inteligência Artificial.</li>
+              <li>Análise da qualidade de respostas produzidas por modelos generativos.</li>
+              <li>Identificação de inconsistências, erros factuais e problemas de aderência às instruções.</li>
+              <li>Aplicação de critérios de qualidade e feedback para a melhoria contínua dos modelos.</li>
+              <li>Revisão, classificação e comparação de respostas com diretrizes de qualidade.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Desenvolvedora Web (Back End), MS Soluções</strong>
+            <ul>
+              <li>Desenvolvimento web com foco em back end.</li>
+            </ul>
+          </li>
+        </ul>
 
-          <dt>Engenharia de dados</dt>
-          <dd>Python, SSIS, Apache Airflow, Docker, Git, Linux</dd>
-
-          <dt>Nuvem</dt>
-          <dd>AWS (Amazon S3)</dd>
-
-          <dt>BI e análise</dt>
-          <dd>Power BI, DAX, Excel, protótipos de dashboards no Figma</dd>
-
-          <dt>Inteligência artificial</dt>
-          <dd>Engenharia de prompts, APIs de modelos de IA, tool calling, FastAPI, avaliação da qualidade de respostas de LLMs</dd>
-
-          <dt>Método de trabalho</dt>
-          <dd>Scrum, Lean Six Sigma (Yellow Belt)</dd>
-
-          <dt>Idiomas</dt>
-          <dd> Inglês intermediário</dd>
-        </dl>
-      </div>
-    </section>
-
-    <section id="formacao" class="secao">
-      <h2>Formação</h2>
-      <div class="conteudo">
+        <h3 class="subtitulo">Formação</h3>
         <ul class="formacao">
           <li>
             <strong>Bacharelado em Sistemas de Informação</strong>
@@ -144,14 +235,43 @@
       </div>
     </section>
 
+    <section id="habilidades" class="secao">
+      <h2>Habilidades</h2>
+      <div class="conteudo">
+        <dl class="habilidades">
+          <dt>IA e LLMs</dt>
+          <dd>Fine-tuning com QLoRA, PyTorch, Transformers, Hugging Face, APIs de modelos de IA, tool calling, engenharia de prompts, avaliação de respostas de LLMs</dd>
+
+          <dt>Software</dt>
+          <dd>Python, FastAPI, APIs REST, Git, Linux, Docker</dd>
+
+          <dt>Dados</dt>
+          <dd>SQL, SQL Server, MySQL, PostgreSQL, Databricks, SSIS, Apache Airflow</dd>
+
+          <dt>BI e análise</dt>
+          <dd>Power BI, DAX, Excel, protótipos de dashboards no Figma</dd>
+
+          <dt>Nuvem</dt>
+          <dd>AWS (Amazon S3)</dd>
+
+          <dt>Método de trabalho</dt>
+          <dd>Scrum, Lean Six Sigma (Yellow Belt)</dd>
+
+          <dt>Idiomas</dt>
+          <dd>Português nativo, inglês intermediário</dd>
+        </dl>
+      </div>
+    </section>
+
     <section id="contato" class="secao">
       <h2>Contato</h2>
       <div class="conteudo">
-        <p>Quer conversar sobre dados, BI ou automação com IA? Me escreva.</p>
+        <p>Quer conversar sobre IA, LLMs ou dados? Me escreva.</p>
         <p class="links-contato">
-          <a href="mailto:jeniffersantossilva10@gmail.com">seu-email@exemplo.com</a>
-          <a href="https://www.linkedin.com/in/SEU-LINKEDIN">LinkedIn</a>
-          <a href="https://github.com/jeniffersantos09">GitHub</a>
+          <a href="mailto:seu-email@exemplo.com">seu-email@exemplo.com</a>
+          <a href="https://www.linkedin.com/in/jeniffer-santos-/">LinkedIn</a>
+          <a href="https://github.com/SEU-USUARIO">GitHub</a>
+          <a href="https://huggingface.co/SEU-USUARIO-HF">Hugging Face</a>
         </p>
       </div>
     </section>
